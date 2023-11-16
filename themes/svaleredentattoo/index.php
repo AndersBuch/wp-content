@@ -7,7 +7,7 @@
     <link href="<?php echo get_template_directory_uri(); ?>/style.css" rel="stylesheet">
 </head>
 <body>
-
+<?php wp_nav_menu( $args ); ?>
 <?php
 
 // the post loop
