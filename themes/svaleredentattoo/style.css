@@ -10,3 +10,7 @@ Author: Anders Buch & Gustav Bak-Hansen
 Description: Theme developed for Pero
 Version: 0.1
 */
+
+body {
+    background-color: aquamarine;
+}
