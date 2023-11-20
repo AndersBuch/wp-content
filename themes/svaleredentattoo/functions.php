@@ -12,6 +12,8 @@ add_action('wp_enqueue_scripts','load_css');
 
 // Theme Options
 add_theme_support('menus');
+add_theme_support('widgets');
+
 
 // Menus
 register_nav_menus(
@@ -23,3 +25,25 @@ register_nav_menus(
     )
 
 );
+
+// Widgets
+
+function my_sidebar() {
+
+    register_sidebar(
+
+        array(
+
+                'name' => 'Page Sidebar',
+                'id' => 'page-sidebar',
+                'before_widget' => '',
+                'after_widget' => '',
+                'before_title' => '<h3 class="widget-title">',
+                'after_title' => '</h3>'
+
+        )
+
+);
+
+}
+add_action('widgets_init', 'my_sidebar');
